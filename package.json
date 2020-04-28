@@ -7,14 +7,14 @@
 		"start": "parcel index.html"
 	},
 	"dependencies": {
-		"@types/lodash": "^4.14.150",
 		"by": "^0.2.3",
 		"lodash": "^4.17.15",
-		"parcel": "^1.12.4",
 		"pixi.js": "^5.2.3",
 		"rxjs": "^6.5.5"
 	},
 	"devDependencies": {
+		"parcel": "^1.12.4",
+		"@types/lodash": "^4.14.150",
 		"typescript": "^3.8.3"
 	}
 }
