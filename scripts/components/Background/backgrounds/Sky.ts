@@ -1,5 +1,5 @@
-import Sprites from '../Sprites';
-import { Offsets } from '../../interfaces';
+import Sprites from '../../Sprites';
+import { Offsets } from '../../../interfaces';
 import { range } from 'rxjs';
 
 export default class Sky extends Sprites {

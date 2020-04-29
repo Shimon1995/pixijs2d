@@ -1,15 +1,18 @@
-import Sprites from '../Sprites';
+import Sprites from '../../Sprites';
 import { range } from 'rxjs';
-import { Offsets } from '../../interfaces';
+import { Offsets } from '../../../interfaces';
 
 export default class Ground extends Sprites {
 	protected height = 4;
 	protected width = 64;
-	constructor(offsets: Offsets, background: PIXI.Container) {
+	protected collidable = true;
+
+	constructor(protected offsets: Offsets, background: PIXI.Container) {
 		super();
 		this.pushToBackground(offsets, background);
 	}
-	tiles() {
+
+	protected tiles() {
 		let array = [];
 		range(0, this.width * this.height).subscribe((index: number) => {
 			const y = Math.floor(index / this.width);
