@@ -8,6 +8,7 @@ export default abstract class Sprites {
 	protected abstract width: number;
 	protected abstract offsets: Offsets;
 	protected abstract tiles(): number[];
+	protected sprite: PIXI.Sprite;
 
 	protected collidable: boolean = false;
 	protected tile = new Tile();
@@ -32,12 +33,12 @@ export default abstract class Sprites {
 			for (let x = 0; x < this.width; x++) {
 				const tileIndex = y * this.width + x;
 				let tile = tiles[tileIndex];
-				let sprite = new PIXI.Sprite(this.tile.tileTextures[tile]);
+				this.sprite = new PIXI.Sprite(this.tile.tileTextures[tile]);
 
-				sprite.x = x * (this.tile.tileSize - 1) + offsetX;
-				sprite.y = y * this.tile.tileSize + offsetY;
+				this.sprite.x = x * (this.tile.tileSize - 1) + offsetX;
+				this.sprite.y = y * this.tile.tileSize + offsetY;
 
-				background.addChild(sprite);
+				background.addChild(this.sprite);
 			}
 		}
 	}

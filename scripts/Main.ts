@@ -3,7 +3,6 @@ import IMG from '../assets/sprite.png';
 import Collisions from './components/Collision/Collision';
 import Background from './components/Background/Background';
 import Decoration from './components/Decoration/Decoration';
-import Blob from './components/Blob';
 import app from './app';
 
 export default class Main {
@@ -20,9 +19,9 @@ export default class Main {
 			new Decoration();
 
 			const colliders = new Collisions();
-			const collidables = colliders.getCollidables();
+			// const collidables = colliders.getCollidables();
 
-			new Blob(collidables);
+			// new Blob(collidables);
 		});
 	}
 
