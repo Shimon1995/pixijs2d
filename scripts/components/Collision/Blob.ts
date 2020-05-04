@@ -74,7 +74,7 @@ export default class Blob extends Sprites {
 				break;
 			case 'ArrowUp':
 				range(1, 100, animationFrameScheduler).subscribe((offsetY) => {
-					// this.divider += 0.05;
+					this.divider += 0.05;
 					this.sprite.y -= offsetY / this.divider;
 				});
 				setTimeout(() => {
