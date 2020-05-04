@@ -9,3 +9,8 @@ export interface CollisionBlock {
 	height: number;
 	width: number;
 }
+
+export interface InputEvent {
+	offset: number;
+	direction: string;
+}

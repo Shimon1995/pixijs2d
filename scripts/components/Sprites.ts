@@ -26,7 +26,7 @@ export default abstract class Sprites {
 		}
 	}
 
-	pushToBackground({ offsetY, offsetX }, background: PIXI.Container): void {
+	pushToBackground({ offsetY, offsetX }: Offsets, background: PIXI.Container): void {
 		const tiles = this.tiles();
 
 		for (let y = 0; y < this.height; y++) {

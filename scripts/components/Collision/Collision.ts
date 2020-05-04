@@ -19,15 +19,15 @@ export default class Collisions extends Global {
 
 		of(
 			new GroungBlock({ offsetY: 300, offsetX: 300 }, this.collisions),
-			new Platform({ offsetY: 200, offsetX: 200 }, this.collisions),
 			new Ground({ offsetY: 420, offsetX: 0 }, this.collisions),
+			new Platform({ offsetY: 200, offsetX: 200 }, this.collisions),
 		)
 			.pipe(map((collision) => collision.getCollisions()))
 			.subscribe((result) => {
 				this.collidables.push(result);
 			});
 
-		new Blob({ offsetY: 200, offsetX: 100 }, this.collisions, this.collidables);
+		new Blob({ offsetY: 100, offsetX: 320 }, this.collisions, this.collidables);
 		this.collisions.scale.set(this.scale);
 
 		this.app.stage.addChild(this.collisions);
